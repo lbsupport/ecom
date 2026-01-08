@@ -2,6 +2,7 @@
 <html class="light" lang="en">
 
 <head>
+    <link rel="icon" href="/lb.svg" />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Lakebrains E-com Solutions</title>
@@ -9,7 +10,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet" />
     <!-- CSS removed -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -42,8 +43,8 @@
                         "surface-dark": "#2d1b32",
                     },
                     fontFamily: {
-                        "display": ["Spline Sans", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"]
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
                     },
                     borderRadius: {
                         "DEFAULT": "1rem",
@@ -55,8 +56,13 @@
                     animation: {
                         'blob': 'blob 7s infinite',
                         'shimmer': 'shimmer 2s infinite',
+                        'tilt': 'tilt 2s infinite ease-in-out',
                     },
                     keyframes: {
+                        tilt: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '50%': { transform: 'rotate(5deg)' },
+                        },
                         blob: {
                             '0%': { transform: 'translate(0px, 0px) scale(1)' },
                             '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
@@ -74,6 +80,33 @@
     <style>
         html {
             scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h2,
+        h3 {
+            font-weight: 600;
+        }
+
+        .small-text {
+            font-weight: 500;
         }
 
         .squiggle-underline {
@@ -108,7 +141,7 @@
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white">
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-body antialiased selection:bg-primary selection:text-white">
 
     <!-- Sticky Navbar -->
     <header
@@ -134,6 +167,8 @@
                 <a class="text-sm font-medium text-slate-800 dark:text-slate-100 transition-all duration-300 hover:text-primary hover:scale-110 hover:underline hover:underline-offset-4"
                     href="#solution">Solution</a>
                 <a class="text-sm font-medium text-slate-800 dark:text-slate-100 transition-all duration-300 hover:text-primary hover:scale-110 hover:underline hover:underline-offset-4"
+                    href="#testimonials">Real Stories</a>
+                <a class="text-sm font-medium text-slate-800 dark:text-slate-100 transition-all duration-300 hover:text-primary hover:scale-110 hover:underline hover:underline-offset-4"
                     href="#what-you-get">What You Get</a>
                 <a class="text-sm font-medium text-slate-800 dark:text-slate-100 transition-all duration-300 hover:text-primary hover:scale-110 hover:underline hover:underline-offset-4"
                     href="#pricing">Pricing</a>
@@ -152,7 +187,7 @@
         <section id="hero"
             class="w-full relative flex min-h-[75vh] flex-col justify-center overflow-hidden bg-strawberry/10">
             <div
-                class="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+                class="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
                 <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
                     <!-- Left Column: Content -->
                     <div class="flex flex-col gap-8 text-center lg:text-left">
@@ -221,7 +256,8 @@
                     </div>
 
                     <!-- Right Column: Visual -->
-                    <div class="hidden lg:block relative mx-auto w-full max-w-lg lg:max-w-none">
+                    <div
+                        class="relative -mx-4 w-[calc(100%+2rem)] sm:mx-auto sm:w-full max-w-lg lg:max-w-none order-first lg:order-last">
                         <!-- Background decorative blobs -->
                         <div
                             class="hidden md:block absolute -right-4 -top-4 -z-10 h-72 w-72 rounded-full bg-coral/30 mix-blend-multiply blur-3xl dark:bg-coral/30 dark:mix-blend-normal filter">
@@ -242,94 +278,17 @@
                                 style="animation-delay: 2s"></div>
 
                             <!-- Main Browser Window (The Platform) -->
-                            <div
-                                class="relative z-10 w-full max-w-[440px] bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-800 overflow-hidden transform hover:-translate-y-2 transition-transform duration-500">
-                                <!-- Browser Toolbar -->
-                                <div
-                                    class="h-10 bg-gray-50 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 flex items-center px-4 gap-2">
-                                    <div class="flex gap-1.5">
-                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                                    </div>
-                                    <div
-                                        class="flex-1 ml-4 bg-white dark:bg-gray-900 h-6 rounded-md border border-gray-100 dark:border-gray-700 mx-auto max-w-[200px] flex items-center px-2 text-[10px] text-gray-400">
-                                        founderplatform.com/dashboard
-                                    </div>
-                                </div>
-
-                                <!-- Dashboard Content -->
-                                <div class="p-6">
-                                    <div class="flex justify-between items-center mb-6">
-                                        <div>
-                                            <div class="h-4 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
-                                            <div class="h-2 w-20 bg-gray-100 dark:bg-gray-800 rounded"></div>
-                                        </div>
-                                        <div
-                                            class="h-8 w-8 rounded-full bg-strawberry/10 flex items-center justify-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                                fill="currentColor" class="text-strawberry text-sm"
-                                                style="width: 1em; height: 1em;">
-                                                <path
-                                                    d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm48-60h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Zm44-210q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-130Z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <!-- Stats Graphic -->
-                                    <div class="grid grid-cols-2 gap-4 mb-6">
-                                        <div class="bg-orange/5 p-4 rounded-lg">
-                                            <div class="text-xs text-gray-500 mb-1">Total Sales</div>
-                                            <div class="text-xl font-bold text-gray-900 dark:text-white">₹45.2k</div>
-                                            <div class="mt-2 h-1 w-full bg-orange/20 rounded-full overflow-hidden">
-                                                <div class="h-full w-[70%] bg-orange rounded-full"></div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-willow/5 p-4 rounded-lg">
-                                            <div class="text-xs text-gray-500 mb-1">Active Orders</div>
-                                            <div class="text-xl font-bold text-gray-900 dark:text-white">12</div>
-                                            <div class="mt-2 h-1 w-full bg-willow/20 rounded-full overflow-hidden">
-                                                <div class="h-full w-[40%] bg-willow rounded-full"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- "Workflow" Elements -->
-                                    <div class="space-y-3">
-                                        <div
-                                            class="flex items-center gap-3 p-3 rounded-lg border border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                                            <div class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 bg-cover bg-center"
-                                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLeir_O4JZLBPjojkor3VMJs2v9dSg_1wVMk_JD38Ya_j24eUYqO91SDek-ot_Q7l-ef-iZIhiB_d438YyN0bUe7gihE7qXngvyPWt77_1n-GVwXNUOTbaH6c9wD9lUBhW8H9EIgqGb7ySZFYgp547nL6Q9pYWjPy7omUDe6Qz2fAM6kjqi8RPvA9YyB6EdKYxC9Du4ATOwGBoHj1am7uylcfg187TrALsldcsK04TtXvmkLFI0Fsc3xn5j7adAYPaBH2F1rOfLou9')">
-                                            </div>
-                                            <div class="flex-1">
-                                                <div class="h-3 w-24 bg-gray-200 dark:bg-gray-700 rounded mb-1"></div>
-                                                <div class="h-2 w-16 bg-gray-100 dark:bg-gray-800 rounded"></div>
-                                            </div>
-                                            <div
-                                                class="px-2 py-1 rounded text-[10px] font-bold bg-green-100 text-green-700">
-                                                Paid</div>
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-3 p-3 rounded-lg border border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                                            <div class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 bg-cover bg-center"
-                                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOySdd6Pw2r6vxQ4Q0R4UBFAYIdsFqeEym4cIl5ldDo69376Y-kGcDlAR2Oc26PqD40aO6hRjgt_gvUTeuk2dlt5VOO8KegjZChxQF1UXQpwz8dFtbCk__yIDv4jtLVYwnmwo__xQBhZliD648h7aMMnEyHvP447CW5fzwu3iemMLKlyTOJ47p0pI5sRb8l8gFS_cuFMQJht6L0dUjCOTMej4y0kraGfU7WeSPyldqiXVGxw8bMU2houcp0HUQBrY4B7NElxIr5eZ9')">
-                                            </div>
-                                            <div class="flex-1">
-                                                <div class="h-3 w-20 bg-gray-200 dark:bg-gray-700 rounded mb-1"></div>
-                                                <div class="h-2 w-12 bg-gray-100 dark:bg-gray-800 rounded"></div>
-                                            </div>
-                                            <div
-                                                class="px-2 py-1 rounded text-[10px] font-bold bg-yellow-100 text-yellow-700">
-                                                Packing</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <a href="https://thesoulnuts.com/" target="_blank"
+                                class="block relative z-10 w-full max-w-xl transform hover:-translate-y-2 transition-transform duration-500 group">
+                                <img src="theSoulnut.png" alt="The Soul Nut Store"
+                                    class="w-full h-64 sm:h-auto object-cover object-top rounded-xl shadow-2xl border-4 border-white dark:border-gray-800 ring-1 ring-black/5 group-hover:shadow-3xl transition-all">
+                            </a>
 
                             <!-- Floating Characters & Elements (Simulating the Illustration Vibe) -->
 
                             <!-- Element 1: The "Busy Founder" (Left) -->
-                            <div class="absolute -left-4 top-20 z-20 animate-bounce" style="animation-duration: 4s">
+                            <div class="hidden md:block absolute -left-4 top-20 z-20 animate-bounce"
+                                style="animation-duration: 4s">
                                 <div
                                     class="bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-xl flex items-center gap-3 border border-gray-100 dark:border-gray-700 transform -rotate-6 transition-transform hover:rotate-0 hover:scale-105">
                                     <div
@@ -348,7 +307,8 @@
                             </div>
 
                             <!-- Element 2: The "Growth Graph" (Right Bottom) -->
-                            <div class="absolute -right-8 bottom-12 z-20 animate-bounce" style="animation-duration: 5s">
+                            <div class="hidden md:block absolute -right-8 bottom-12 z-20 animate-bounce"
+                                style="animation-duration: 5s">
                                 <div
                                     class="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 transform rotate-6 transition-transform hover:rotate-0 hover:scale-105">
                                     <div class="flex items-end gap-1 h-12 w-24">
@@ -365,7 +325,7 @@
                             </div>
 
                             <!-- Element 3: Verified Badge (Top Right) -->
-                            <div class="absolute -right-2 top-0 z-0">
+                            <div class="hidden md:block z-20 absolute -right-2 top-0 z-20">
                                 <div
                                     class="w-20 h-20 bg-seagrass/20 rounded-full flex items-center justify-center animate-pulse">
                                     <div
@@ -950,14 +910,13 @@
             </section>
 
             <!-- Solution CTA -->
-            <section class="bg-background-dark py-10 px-5 md:px-10 relative overflow-hidden">
-                <div
-                    class="absolute -top-24 -right-24 w-96 h-96 bg-willow/10 rounded-full blur-3xl pointer-events-none">
+            <section class="bg-willow/40 py-10 px-5 md:px-10 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/20 rounded-full blur-3xl pointer-events-none">
                 </div>
 
                 <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 relative z-10">
                     <!-- Left: Icon -->
-                    <div class="shrink-0 bg-white/10 p-4 rounded-full shadow-sm backdrop-blur-sm">
+                    <div class="shrink-0 bg-white/40 p-4 rounded-full shadow-sm backdrop-blur-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
                             class="text-5xl text-seagrass animate-pulse" style="width: 1em; height: 1em;">
                             <path
@@ -967,10 +926,10 @@
 
                     <!-- Middle: Content -->
                     <div class="flex-1 text-center md:text-left">
-                        <h2 class="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-2">
                             Ready to grow your business with confidence?
                         </h2>
-                        <p class="text-base md:text-lg text-gray-300">
+                        <p class="text-base md:text-lg text-slate-700">
                             Join thousands of women founders who are building their digital empire.
                         </p>
                     </div>
@@ -984,7 +943,7 @@
             </section>
         </div>
 
-        <section id="testimonials" class="w-full py-20 bg-white dark:bg-black/20 overflow-hidden relative">
+        <section id="testimonials" class="w-full py-20 bg-strawberry/10 dark:bg-black/20 overflow-hidden relative">
             <!-- Background elements matching the theme -->
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-10 right-10 w-64 h-64 bg-strawberry/5 rounded-full blur-3xl"></div>
@@ -1189,19 +1148,91 @@
                                     box. No coding, no plugins, just add your flair and go live.</p>
                             </div>
                             <div
-                                class="relative h-48 w-full rounded-lg overflow-hidden bg-gradient-to-br from-seagrass/10 to-purple-100 dark:from-seagrass/20 dark:to-gray-800">
+                                class="relative h-64 w-full rounded-lg overflow-hidden bg-gradient-to-br from-seagrass/10 to-purple-100 dark:from-seagrass/20 dark:to-gray-800">
                                 <!-- Abstract representation of a store layout -->
                                 <div
-                                    class="absolute inset-4 bg-white dark:bg-gray-900 rounded shadow-sm opacity-80 flex flex-col gap-2 p-3">
-                                    <div class="h-4 w-1/3 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                                    <div class="flex gap-2 mt-2">
-                                        <div class="h-20 w-1/3 bg-seagrass/20 rounded"></div>
-                                        <div class="h-20 w-1/3 bg-seagrass/20 rounded"></div>
-                                        <div class="h-20 w-1/3 bg-seagrass/20 rounded"></div>
+                                    class="absolute inset-3 bg-white dark:bg-gray-900 rounded shadow-sm opacity-95 p-3 flex flex-col">
+                                    <!-- Fake Header -->
+                                    <div
+                                        class="text-[10px] uppercase tracking-wider font-bold text-gray-400 dark:text-gray-500 mb-3 text-center">
+                                        Products Catalogue
+                                    </div>
+
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <!-- Item 1: Watch -->
+                                        <div class="flex flex-col gap-1.5 group/item">
+                                            <div class="w-full aspect-square rounded-md bg-gray-50 dark:bg-gray-800 bg-cover bg-center"
+                                                style="background-image: url('https://images.unsplash.com/photo-1434056886845-dac89ffe9b56')">
+                                            </div>
+                                            <div class="flex justify-between items-start">
+                                                <div class="flex flex-col">
+                                                    <span
+                                                        class="text-[9px] font-bold text-slate-700 dark:text-slate-300 leading-tight">Watch
+                                                    </span>
+                                                    <span class="text-[8px] text-slate-500 dark:text-slate-500">₹
+                                                        ---</span>
+                                                </div>
+                                                <button
+                                                    class="h-5 w-5 flex items-center justify-center rounded bg-seagrass/10 text-seagrass hover:bg-seagrass hover:text-white transition-colors">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="w-3 h-3">
+                                                        <path fill-rule="evenodd"
+                                                            d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Item 2: Headphones -->
+                                        <div class="flex flex-col gap-1.5 group/item">
+                                            <div class="w-full aspect-square rounded-md bg-gray-50 dark:bg-gray-800 bg-cover bg-center"
+                                                style="background-image: url('https://plus.unsplash.com/premium_photo-1679513691474-73102089c117')">
+                                            </div>
+                                            <div class="flex justify-between items-start">
+                                                <div class="flex flex-col">
+                                                    <span
+                                                        class="text-[9px] font-bold text-slate-700 dark:text-slate-300 leading-tight">Audio</span>
+                                                    <span class="text-[8px] text-slate-500 dark:text-slate-500">₹
+                                                        ---</span>
+                                                </div>
+                                                <button
+                                                    class="h-5 w-5 flex items-center justify-center rounded bg-seagrass/10 text-seagrass hover:bg-seagrass hover:text-white transition-colors">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="w-3 h-3">
+                                                        <path fill-rule="evenodd"
+                                                            d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Item 3: Cover -->
+                                        <div class="flex flex-col gap-1.5 group/item">
+                                            <div class="w-full aspect-square rounded-md bg-gray-50 dark:bg-gray-800 bg-cover bg-center"
+                                                style="background-image: url('https://images.unsplash.com/photo-1535157412991-2ef801c1748b')">
+                                            </div>
+                                            <div class="flex justify-between items-start">
+                                                <div class="flex flex-col">
+                                                    <span
+                                                        class="text-[9px] font-bold text-slate-700 dark:text-slate-300 leading-tight">Cover</span>
+                                                    <span class="text-[8px] text-slate-500 dark:text-slate-500">₹
+                                                        ---</span>
+                                                </div>
+                                                <button
+                                                    class="h-5 w-5 flex items-center justify-center rounded bg-seagrass/10 text-seagrass hover:bg-seagrass hover:text-white transition-colors">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="w-3 h-3">
+                                                        <path fill-rule="evenodd"
+                                                            d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div
-                                    class="absolute bottom-4 right-4 bg-seagrass text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                                    class="absolute bottom-4 right-4 bg-seagrass/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-tilt">
                                     Ready to Launch</div>
                             </div>
                         </div>
@@ -1480,8 +1511,8 @@
                         </div>
                         <div class="mt-8">
                             <a href="#cta"
-                                class="block w-full text-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold py-3.5 rounded-xl hover:opacity-90 transition-opacity">
-                                Get Started
+                                class="group relative flex w-full h-12 items-center justify-center overflow-hidden rounded-full bg-primary px-6 text-base font-bold text-white transition-all hover:bg-primary/20 hover:text-primary backdrop-blur-md">
+                                <span class="relative z-10">Get Started</span>
                             </a>
                         </div>
                     </div>
@@ -1489,235 +1520,156 @@
             </div>
         </section>
 
-        <section id="cta" class="relative flex items-center justify-center py-20 px-4 md:px-10 bg-cerulean/30">
+        <section id="cta"
+            class="relative flex items-center justify-center min-h-[90vh] py-12 px-4 md:px-10 bg-cerulean/5">
             <!-- Abstract Fun Graphics (Background) -->
             <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
                 <div
-                    class="hidden md:block blob-shape bg-cerulean/30 dark:bg-purple-900 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply dark:mix-blend-screen animate-blob">
+                    class="hidden md:block blob-shape bg-cerulean/20 dark:bg-purple-900 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply dark:mix-blend-screen animate-blob">
                 </div>
-                <div class="hidden md:block blob-shape bg-cyan/30 dark:bg-pink-900 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 mix-blend-multiply dark:mix-blend-screen animate-blob"
+                <div class="hidden md:block blob-shape bg-cyan/20 dark:bg-pink-900 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 mix-blend-multiply dark:mix-blend-screen animate-blob"
                     style="animation-delay: 2s;"></div>
-                <div class="hidden md:block blob-shape bg-slate-blue/30 dark:bg-yellow-800 w-72 h-72 rounded-full top-1/2 left-1/4 mix-blend-multiply dark:mix-blend-screen animate-blob"
-                    style="animation-delay: 4s;"></div>
             </div>
-            <!-- Central Card Container -->
-            <div class="relative z-10 w-full max-w-[960px] mx-auto">
-                <div
-                    class="bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[3rem] shadow-2xl p-8 md:p-16 lg:p-20 flex flex-col items-center text-center gap-10 transform transition-all hover:scale-[1.01] duration-500">
-                    <!-- Decoration Top -->
-                    <div
-                        class="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-transparent via-cerulean to-transparent opacity-50">
-                    </div>
-                    <h1
-                        class="text-[#180d1b] dark:text-white tracking-tight text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1]">
-                        Take the next <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-cerulean to-slate-blue">small,
-                            safe step</span>
-                    </h1>
-                    <!-- Social Proof / Avatar Group -->
-                    <!-- <div class="flex flex-col items-center gap-3">
-                        <div class="flex items-center -space-x-4">
-                            <div
-                                class="relative w-12 h-12 rounded-full border-4 border-white dark:border-[#2a1b30] overflow-hidden shadow-sm">
-                                <img alt="Smiling woman founder with glasses" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCSiL9DfZut7_9rO6EJm0GgR9QoclLcdtUGppxKm2t3V8I2q9J2OlgjSDZ-4QVb6GdtjJF7Ns4BHzDuEzy3gHitAaa60M2kNuTwABbHm0R8PaSqxeJZoeS9jL1WDifIY6E3upFdHtDlnVHqO2P8axWsoltqIbqIW91WvCwgkNfxs7Bq0TFiUCVJIT1BtKxunW_ewD9Lo5DT1Mmhc7HiC7ZSrGZGVXzwRVYgfHa8yq5fuEBnHDcdwMXy8CZbd-kIsM-d5IUUvMrrPr" />
-                            </div>
-                            <div
-                                class="relative w-12 h-12 rounded-full border-4 border-white dark:border-[#2a1b30] overflow-hidden shadow-sm">
-                                <img alt="Woman entrepreneur in office" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB2xKRBP1thtoszoQ5XlaPuXj2_G_XNev6dX0rl9djsjGkWAnHahoOK7vCHuBYp3RMj0GJgsoxq0f7-LOthHEh5t6zGxJBMRqmTUqD4UAvCbv76aDkJvc3HcKAHnnjkpcCkJhhQgwuX60dXiquGP2emTowxEIbkMDkjOvFaBohy-YwBJrE76MoRGNqp9ILnQ_Vv6ASqqWQck3BGIA4rZPZHzN9vSovhbMTqfb1NjW_rhdgIrPYiYb_9FRouiuMA7WfZcYDFtKgxsW_" />
-                            </div>
-                            <div
-                                class="relative w-12 h-12 rounded-full border-4 border-white dark:border-[#2a1b30] overflow-hidden shadow-sm">
-                                <img alt="Professional woman smiling" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqo_cqfaf0pggUe22zoVMSFL3d3eQUxQf5oOEhNU6xK7PxKJboN-PYiin3IVmv9hM3FznwPz4KiJLBsOGwymbvD_5mh3bP3gtb2lVhLfhEg2v82hNb1X-po_EZVcJsMzT11K_rZdpavjIDRg2b2O2xpS56zrVOWwgR9mbAjGE1mQhSMiXxOyhmxh5xodcFEXIzyQ4WTdpYskRVJh3rctm2mUCfCLnETKGrlyZmF92SsXCHbShEbd5Ev5Qul4C6NnyJrWQY6DmVDRir" />
-                            </div>
-                            <div
-                                class="relative w-12 h-12 rounded-full border-4 border-white dark:border-[#2a1b30] bg-[#f0e7f3] dark:bg-gray-700 flex items-center justify-center shadow-sm">
-                                <span class="text-xs font-bold text-cerulean dark:text-cerulean-300">+7</span>
-                            </div>
+
+            <!-- Central Content Container -->
+            <div
+                class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
+
+                <!-- Left Column: Headline & Action -->
+                <div class="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
+                    <div class="space-y-4">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cerulean/10 text-cerulean text-sm font-bold animate-pulse">
+                            <span class="w-2 h-2 rounded-full bg-cerulean"></span>
+                            Only 3 Spots Left
                         </div>
-                        <div class="flex items-center gap-1.5 px-3 py-1 bg-green-100 dark:bg-green-900/30 rounded-full">
-                            <span
-                                class="material-symbols-outlined text-[16px] text-green-600 dark:text-green-400">verified</span>
-                            <span
-                                class="text-xs font-bold text-green-700 dark:text-green-300 uppercase tracking-wide">Verified
-                                Community</span>
-                        </div>
-                    </div> -->
-                    <!-- Filtering / Who This Is For -->
-                    <div
-                        class="w-full max-w-3xl mx-auto mb-10 bg-white/50 dark:bg-black/20 rounded-2xl p-6 border border-white/50 dark:border-white/5 text-left">
-                        <h3 class="text-center text-lg font-bold text-slate-900 dark:text-white mb-6">This is perfect
-                            for you if </h3>
-
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <!-- Perfect For -->
-                            <div>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                            fill="currentColor" class="text-green-600 text-[20px] mt-0.5"
-                                            style="width: 1em; height: 1em;">
-                                            <path
-                                                d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z" />
-                                        </svg>
-                                        <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">You’re a
-                                            woman founder in India</span>
-                                    </li>
-                                    <li class="flex items-start gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                            fill="currentColor" class="text-green-600 text-[20px] mt-0.5"
-                                            style="width: 1em; height: 1em;">
-                                            <path
-                                                d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z" />
-                                        </svg>
-                                        <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">You’ve been
-                                            selling for 6+ months</span>
-                                    </li>
-                                    <li class="flex items-start gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                            fill="currentColor" class="text-green-600 text-[20px] mt-0.5"
-                                            style="width: 1em; height: 1em;">
-                                            <path
-                                                d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z" />
-                                        </svg>
-                                        <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">Most sales
-                                            come from Instagram / WhatsApp</span>
-                                    </li>
-                                    <li class="flex items-start gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                            fill="currentColor" class="text-green-600 text-[20px] mt-0.5"
-                                            style="width: 1em; height: 1em;">
-                                            <path
-                                                d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z" />
-                                        </svg>
-                                        <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">You want a
-                                            website for trust, not ads</span>
-                                    </li>
-                                    <li class="flex items-start gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                            fill="currentColor" class="text-green-600 text-[20px] mt-0.5"
-                                            style="width: 1em; height: 1em;">
-                                            <path
-                                                d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z" />
-                                        </svg>
-                                        <span class="text-slate-700 dark:text-slate-300 font-medium text-sm">You don’t
-                                            want high monthly commitments</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Not For -->
-                            <div class="relative">
-                                <div
-                                    class="hidden md:block absolute left-[-1rem] top-0 bottom-0 w-px bg-slate-200 dark:bg-white/10">
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 md:pl-4">Not
-                                    for</h4>
-                                <ul class="space-y-3 md:pl-4">
-                                    <li class="flex items-start gap-2.5 opacity-70">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="text-slate-400 text-[20px] mt-0.5" style="width: 1em; height: 1em;">
-                                            <path opacity=".87" fill="none" d="M0 0h24v24H0V0z" />
-                                            <path
-                                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z" />
-                                        </svg>
-                                        <span class="text-slate-600 dark:text-slate-400 text-sm">Day-0 ideas</span>
-                                    </li>
-                                    <li class="flex items-start gap-2.5 opacity-70">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="text-slate-400 text-[20px] mt-0.5" style="width: 1em; height: 1em;">
-                                            <path opacity=".87" fill="none" d="M0 0h24v24H0V0z" />
-                                            <path
-                                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z" />
-                                        </svg>
-                                        <span class="text-slate-600 dark:text-slate-400 text-sm">Dropshippers</span>
-                                    </li>
-                                    <li class="flex items-start gap-2.5 opacity-70">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="text-slate-400 text-[20px] mt-0.5" style="width: 1em; height: 1em;">
-                                            <path opacity=".87" fill="none" d="M0 0h24v24H0V0z" />
-                                            <path
-                                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z" />
-                                        </svg>
-                                        <span class="text-slate-600 dark:text-slate-400 text-sm">People looking for
-                                            “marketing guarantees” too</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Headline & Copy -->
-                    <div class="max-w-[720px] flex flex-col gap-4">
-
-                        <p class="text-slate-600 dark:text-slate-300 text-lg md:text-xl font-normal leading-relaxed">
-                            We are currently onboarding a private cohort of just 10 women founders. Get personalized
-                            store setup, direct feedback, and a safe space to grow your brand.
+                        <h1
+                            class="text-[#180d1b] dark:text-white tracking-tight text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1]">
+                            Take the next <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-cerulean to-slate-blue">small,
+                                safe step</span>
+                        </h1>
+                        <p
+                            class="text-slate-600 dark:text-slate-300 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+                            We are onboarding a private cohort of just 10 founders. Get personalized setup, direct
+                            feedback, and a safe space to grow.
                         </p>
                     </div>
-                    <!-- Scarcity / Progress Bar -->
-                    <!-- <div
-                        class="w-full max-w-md flex flex-col gap-2 p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-[#f0e7f3] dark:border-white/5">
-                        <div class="flex gap-6 justify-between items-end">
-                            <p class="text-[#180d1b] dark:text-white text-base font-bold leading-normal">7 of 10 spots
-                                claimed</p>
-                            <span
-                                class="text-xs font-bold text-secondary-accent bg-orange-50 dark:bg-orange-900/20 px-2 py-1 rounded text-right">High
-                                Demand</span>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                        <button onclick="openModal('book')"
+                            class="w-full sm:w-auto px-8 h-14 rounded-full bg-cerulean hover:bg-cerulean-dark text-white text-lg font-bold shadow-xl shadow-cerulean/20 hover:shadow-2xl hover:shadow-cerulean/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 9v7.5" />
+                            </svg>
+                            Book a Call
+                        </button>
+                        <button onclick="openModal('email')"
+                            class="w-full sm:w-auto px-8 h-14 rounded-full bg-white dark:bg-white/10 text-cerulean dark:text-white border-2 border-cerulean/20 hover:border-cerulean hover:bg-cerulean/5 text-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            Get in Touch
+                        </button>
+                    </div>
+
+                    <!-- Trust Meta -->
+                    <div class="flex items-center gap-4 text-xs font-semibold text-slate-500 uppercase tracking-widest">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            No Coding
+                        </span>
+                        <div class="w-1 h-1 bg-slate-300 rounded-full"></div>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Secure
+                        </span>
+                        <div class="w-1 h-1 bg-slate-300 rounded-full"></div>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Instant Setup
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Perfect For Card -->
+                <div class="flex-1 w-full max-w-lg">
+                    <div
+                        class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-[2.5rem] p-8 shadow-2xl border border-white/20 dark:border-white/5 relative overflow-hidden group">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-cerulean/10 rounded-bl-full transition-all group-hover:scale-110">
                         </div>
-                        <div class="rounded-full bg-[#e1cfe7] dark:bg-white/10 h-3 overflow-hidden relative">
-                            <div
-                                class="h-full rounded-full bg-gradient-to-r from-cerulean to-[#d946ef] w-[70%] relative">
-                                <div
-                                    class="absolute inset-0 bg-white/30 animate-shimmer w-full skew-x-12 -translate-x-full">
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-cerulean dark:text-purple-300 text-sm font-medium leading-normal text-left">Only
-                            3 personalized setup spots left!</p>
-                    </div> -->
-                    <!-- Main CTA Area -->
-                    <div class="flex flex-col items-center gap-6 w-full">
-                        <a href="#"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lakebrains-support/30min'});return false;"
-                            class="group relative flex w-full md:w-auto min-w-[320px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-cerulean hover:bg-cerulean-dark transition-all duration-300 text-[#fbf8fc] text-lg font-bold leading-normal tracking-[0.015em] shadow-xl shadow-cerulean/30 hover:shadow-2xl hover:shadow-cerulean/40 hover:-translate-y-0.5">
-                            <div
-                                class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out">
+
+                        <div class="grid gap-8 relative z-10">
+                            <!-- Perfect For -->
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            class="w-5 h-5">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                    Perfect for you if...
+                                </h3>
+                                <ul class="space-y-3 pl-3 border-l-2 border-green-100 dark:border-green-900/30">
+                                    <li class="pl-3 text-slate-600 dark:text-slate-300 text-sm font-medium">You’re a
+                                        woman founder in India</li>
+                                    <li class="pl-3 text-slate-600 dark:text-slate-300 text-sm font-medium">Selling on
+                                        Instagram/WhatsApp</li>
+                                    <li class="pl-3 text-slate-600 dark:text-slate-300 text-sm font-medium">Want trust
+                                        without high costs</li>
+                                </ul>
                             </div>
 
-                            <span class="relative z-10 flex items-center gap-2">
-                                Apply for Founder Access
-                            </span>
-                        </a>
-                        <!-- Meta Text -->
-                        <div
-                            class="flex flex-wrap justify-center gap-4 text-[#864c9a] dark:text-purple-300 text-sm font-medium leading-normal">
-                            <div class="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
-                                    class="text-[18px]" style="width: 1em; height: 1em;">
-                                    <path
-                                        d="m421-298 283-283-46-45-237 237-120-120-45 45 165 166Zm59 218q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82-31.5 155T763-197.5q-54 54.5-127 86T480-80Zm0-60q142 0 241-99.5T820-480q0-142-99-241t-241-99q-141 0-240.5 99T140-480q0 141 99.5 240.5T480-140Zm0-340Z" />
-                                </svg>
-                                <span>No coding required</span>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-current opacity-50 self-center hidden sm:block"></div>
-                            <div class="flex items-center gap-1.5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="text-[18px]" style="width: 1em; height: 1em;">
-                                    <g fill="none">
-                                        <path d="M0 0h24v24H0V0z" />
-                                        <path opacity=".87" d="M0 0h24v24H0V0z" />
-                                    </g>
-                                    <path
-                                        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
-                                </svg>
-                                <span>100% Safe & Secure</span>
+                            <!-- Divider -->
+                            <div class="h-px w-full bg-slate-100 dark:bg-slate-800"></div>
+
+                            <!-- Not For -->
+                            <div>
+                                <h3 class="text-lg font-bold text-black mb-4 flex items-center gap-2">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-red-100 text-red-400 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            class="w-5 h-5">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                    Not for...
+                                </h3>
+                                <ul class="space-y-3 pl-3 border-l-2 border-slate-100 dark:border-slate-800">
+                                    <li class="pl-3 text-slate-400 text-sm">Day-0 ideas</li>
+                                    <li class="pl-3 text-slate-400 text-sm">Dropshippers</li>
+                                    <li class="pl-3 text-slate-400 text-sm">Strictly Ad-dependent models</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -1728,6 +1680,193 @@
         </div>
     </footer>
 
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop">
+        </div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!-- Modal Panel -->
+                <div class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-slate-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    id="modal-panel">
+
+                    <!-- Close Button -->
+                    <button type="button" onclick="closeModal()"
+                        class="absolute right-4 top-4 text-slate-400 hover:text-slate-500 z-10">
+                        <span class="sr-only">Close</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <h3 class="text-xl font-bold text-center mb-6 text-slate-900 dark:text-white" id="modal-title">
+                            How can we help?</h3>
+
+                        <!-- Tabs -->
+                        <div class="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl mb-6 font-display">
+                            <button onclick="switchTab('book')" id="tab-book"
+                                class="flex-1 py-2.5 text-sm font-bold rounded-lg transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                                Book a Call
+                            </button>
+                            <button onclick="switchTab('email')" id="tab-email"
+                                class="flex-1 py-2.5 text-sm font-bold rounded-lg transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                                Get in Touch
+                            </button>
+                        </div>
+
+                        <!-- Content: Book -->
+                        <div id="content-book" class="hidden">
+                            <div class="text-center space-y-4">
+                                <p class="text-slate-600 dark:text-slate-300 mb-4">Schedule a 1-on-1 session to discuss
+                                    your business goals.</p>
+                                <!-- Calendly Inline -->
+                                <div class="calendly-inline-widget w-full"
+                                    data-url="https://calendly.com/lakebrains-support/30min" style="height:450px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content: Email -->
+                        <div id="content-email" class="hidden">
+                            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="name"
+                                            class="block text-sm font-medium text-slate-700 dark:text-slate-300">Name</label>
+                                        <input type="text" name="name" id="name" required
+                                            class="mt-1 block w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 py-2 px-3 shadow-sm focus:border-cerulean focus:ring-cerulean sm:text-sm text-slate-900 dark:text-white placeholder-slate-400">
+                                    </div>
+                                    <div>
+                                        <label for="phone"
+                                            class="block text-sm font-medium text-slate-700 dark:text-slate-300">Mobile
+                                            Number</label>
+                                        <input type="tel" name="phone" id="phone" required
+                                            class="mt-1 block w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 py-2 px-3 shadow-sm focus:border-cerulean focus:ring-cerulean sm:text-sm text-slate-900 dark:text-white placeholder-slate-400">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email"
+                                        class="block text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
+                                    <input type="email" name="email" id="email" required
+                                        class="mt-1 block w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 py-2 px-3 shadow-sm focus:border-cerulean focus:ring-cerulean sm:text-sm text-slate-900 dark:text-white placeholder-slate-400">
+                                </div>
+                                <div>
+                                    <label for="message"
+                                        class="block text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
+                                    <textarea name="message" id="message" rows="3" required
+                                        class="mt-1 block w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 py-2 px-3 shadow-sm focus:border-cerulean focus:ring-cerulean sm:text-sm text-slate-900 dark:text-white placeholder-slate-400"></textarea>
+                                </div>
+                                <button type="submit" id="submit-btn"
+                                    class="w-full rounded-full bg-cerulean px-4 py-3 text-sm font-bold text-white shadow hover:bg-cerulean-dark focus:outline-none focus:ring-2 focus:ring-cerulean focus:ring-offset-2 transition-colors">
+                                    Send Message
+                                </button>
+                                <p id="form-status" class="text-center text-sm mt-2 hidden"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init("JDc1qHSz73O2ZBKLl");
+        })();
+    </script>
+
+    <script>
+        // Modal Logic
+        const modal = document.getElementById('contact-modal');
+        const backdrop = document.getElementById('modal-backdrop');
+        const panel = document.getElementById('modal-panel');
+        const tabBook = document.getElementById('tab-book');
+        const tabEmail = document.getElementById('tab-email');
+        const contentBook = document.getElementById('content-book');
+        const contentEmail = document.getElementById('content-email');
+
+        function openModal(defaultTab = 'book') {
+            modal.classList.remove('hidden');
+            // Animate in
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                panel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+                panel.classList.add('translate-y-0', 'scale-100');
+            }, 10);
+
+            switchTab(defaultTab);
+        }
+
+        function closeModal() {
+            // Animate out
+            backdrop.classList.add('opacity-0');
+            panel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+            panel.classList.remove('translate-y-0', 'scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function switchTab(tab) {
+            if (tab === 'book') {
+                tabBook.classList.add('bg-white', 'dark:bg-slate-700', 'shadow-sm', 'text-cerulean', 'dark:text-white');
+                tabBook.classList.remove('text-slate-600', 'dark:text-slate-400');
+
+                tabEmail.classList.remove('bg-white', 'dark:bg-slate-700', 'shadow-sm', 'text-cerulean', 'dark:text-white');
+                tabEmail.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:bg-black/5');
+
+                contentBook.classList.remove('hidden');
+                contentEmail.classList.add('hidden');
+            } else {
+                tabEmail.classList.add('bg-white', 'dark:bg-slate-700', 'shadow-sm', 'text-cerulean', 'dark:text-white');
+                tabEmail.classList.remove('text-slate-600', 'dark:text-slate-400');
+
+                tabBook.classList.remove('bg-white', 'dark:bg-slate-700', 'shadow-sm', 'text-cerulean', 'dark:text-white');
+                tabBook.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:bg-black/5');
+
+                contentEmail.classList.remove('hidden');
+                contentBook.classList.add('hidden');
+            }
+        }
+
+        // Form Logic
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('form-status');
+            const form = document.getElementById('contact-form');
+
+            btn.disabled = true;
+            btn.innerText = 'Sending...';
+            status.classList.add('hidden');
+
+            // EmailJS Send
+            // Service ID: service_6kbpyze
+            // Template ID: template_2csf7hd (Provided)
+            emailjs.sendForm('service_6kbpyze', 'template_2csf7hd', form)
+                .then(function () {
+                    status.innerText = 'Message sent successfully!';
+                    status.className = 'text-center text-sm mt-2 text-green-600 font-bold block';
+                    form.reset();
+                    setTimeout(closeModal, 2500);
+                    btn.disabled = false;
+                    btn.innerText = 'Send Message';
+                }, function (error) {
+                    console.error('FAILED...', error);
+                    status.innerText = 'Error sending message. Please try again.';
+                    status.className = 'text-center text-sm mt-2 text-red-600 font-bold block';
+                    btn.disabled = false;
+                    btn.innerText = 'Send Message';
+                });
+        }
+    </script>
 </body>
 
 </html>
