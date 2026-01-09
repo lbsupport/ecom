@@ -187,7 +187,7 @@
         <section id="hero"
             class="w-full relative flex min-h-[75vh] flex-col justify-start lg:justify-center overflow-hidden bg-strawberry/10">
             <div
-                class="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-start lg:justify-center px-4 pt-4 pb-12 sm:px-6 lg:px-8 lg:py-20">
+                class="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-start lg:justify-center px-4 pt-32 pb-12 sm:px-6 lg:px-8 lg:py-20">
                 <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
                     <!-- Left Column: Content -->
                     <div class="flex flex-col gap-8 text-center lg:text-left">
@@ -257,7 +257,7 @@
 
                     <!-- Right Column: Visual -->
                     <div
-                        class="relative -mx-4 w-[calc(100%+2rem)] sm:mx-auto sm:w-full max-w-lg lg:max-w-none order-first lg:order-last">
+                        class="hidden lg:block relative -mx-4 w-[calc(100%+2rem)] sm:mx-auto sm:w-full max-w-lg lg:max-w-none order-first lg:order-last">
                         <!-- Background decorative blobs -->
                         <div
                             class="hidden md:block absolute -right-4 -top-4 -z-10 h-72 w-72 rounded-full bg-coral/30 mix-blend-multiply blur-3xl dark:bg-coral/30 dark:mix-blend-normal filter">
@@ -268,7 +268,7 @@
 
                         <!-- Main Graphic Container: Business Workflow Illustration -->
                         <div
-                            class="relative mx-auto w-full max-w-[500px] lg:max-w-none perspective-1000 h-[250px] sm:h-[500px] flex items-center justify-center">
+                            class="relative mx-auto w-full max-w-[500px] lg:max-w-none perspective-1000 h-[400px] sm:h-[500px] flex items-center justify-center">
 
                             <!-- Decorative Background Blobs (Abstract Flow) -->
                             <div
@@ -278,18 +278,94 @@
                                 style="animation-delay: 2s"></div>
 
                             <!-- Main Browser Window (The Platform) -->
-                            <a href="https://thesoulnuts.com/" target="_blank"
-                                class="block relative z-10 w-full max-w-xl transform hover:-translate-y-2 transition-transform duration-500 group">
-                                <img src="https://res.cloudinary.com/daocuhxk2/image/upload/v1767862648/iqh9grfikqm40hvasgyl.png"
-                                    alt="The Soul Nut Store"
-                                    class="w-full h-64 sm:h-auto object-cover object-top sm:rounded-xl shadow-2xl sm:border-4 border-white dark:border-gray-800 ring-1 ring-black/5 group-hover:shadow-3xl transition-all">
-                            </a>
+                            <div
+                                class="relative z-10 w-full max-w-[440px] bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-800 overflow-hidden transform hover:-translate-y-2 transition-transform duration-500">
+                                <!-- Browser Toolbar -->
+                                <div
+                                    class="h-10 bg-gray-50 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 flex items-center px-4 gap-2">
+                                    <div class="flex gap-1.5">
+                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                    </div>
+                                    <div
+                                        class="flex-1 ml-4 bg-white dark:bg-gray-900 h-6 rounded-md border border-gray-100 dark:border-gray-700 mx-auto max-w-[200px] flex items-center px-2 text-[10px] text-gray-400">
+                                        founderplatform.com/dashboard
+                                    </div>
+                                </div>
+
+                                <!-- Dashboard Content -->
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-6">
+                                        <div>
+                                            <div class="h-4 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+                                            <div class="h-2 w-20 bg-gray-100 dark:bg-gray-800 rounded"></div>
+                                        </div>
+                                        <div
+                                            class="h-8 w-8 rounded-full bg-strawberry/10 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                fill="currentColor" class="text-strawberry text-sm"
+                                                style="width: 1em; height: 1em;">
+                                                <path
+                                                    d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm48-60h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Zm44-210q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-130Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stats Graphic -->
+                                    <div class="grid grid-cols-2 gap-4 mb-6">
+                                        <div class="bg-orange/5 p-4 rounded-lg">
+                                            <div class="text-xs text-gray-500 mb-1">Total Sales</div>
+                                            <div class="text-xl font-bold text-gray-900 dark:text-white">₹45.2k</div>
+                                            <div class="mt-2 h-1 w-full bg-orange/20 rounded-full overflow-hidden">
+                                                <div class="h-full w-[70%] bg-orange rounded-full"></div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-willow/5 p-4 rounded-lg">
+                                            <div class="text-xs text-gray-500 mb-1">Active Orders</div>
+                                            <div class="text-xl font-bold text-gray-900 dark:text-white">12</div>
+                                            <div class="mt-2 h-1 w-full bg-willow/20 rounded-full overflow-hidden">
+                                                <div class="h-full w-[40%] bg-willow rounded-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- "Workflow" Elements -->
+                                    <div class="space-y-3">
+                                        <div
+                                            class="flex items-center gap-3 p-3 rounded-lg border border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                            <div class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 bg-cover bg-center"
+                                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLeir_O4JZLBPjojkor3VMJs2v9dSg_1wVMk_JD38Ya_j24eUYqO91SDek-ot_Q7l-ef-iZIhiB_d438YyN0bUe7gihE7qXngvyPWt77_1n-GVwXNUOTbaH6c9wD9lUBhW8H9EIgqGb7ySZFYgp547nL6Q9pYWjPy7omUDe6Qz2fAM6kjqi8RPvA9YyB6EdKYxC9Du4ATOwGBoHj1am7uylcfg187TrALsldcsK04TtXvmkLFI0Fsc3xn5j7adAYPaBH2F1rOfLou9')">
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-3 w-24 bg-gray-200 dark:bg-gray-700 rounded mb-1"></div>
+                                                <div class="h-2 w-16 bg-gray-100 dark:bg-gray-800 rounded"></div>
+                                            </div>
+                                            <div
+                                                class="px-2 py-1 rounded text-[10px] font-bold bg-green-100 text-green-700">
+                                                Paid</div>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 p-3 rounded-lg border border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                            <div class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex-shrink-0 bg-cover bg-center"
+                                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOySdd6Pw2r6vxQ4Q0R4UBFAYIdsFqeEym4cIl5ldDo69376Y-kGcDlAR2Oc26PqD40aO6hRjgt_gvUTeuk2dlt5VOO8KegjZChxQF1UXQpwz8dFtbCk__yIDv4jtLVYwnmwo__xQBhZliD648h7aMMnEyHvP447CW5fzwu3iemMLKlyTOJ47p0pI5sRb8l8gFS_cuFMQJht6L0dUjCOTMej4y0kraGfU7WeSPyldqiXVGxw8bMU2houcp0HUQBrY4B7NElxIr5eZ9')">
+                                            </div>
+                                            <div class="flex-1">
+                                                <div class="h-3 w-20 bg-gray-200 dark:bg-gray-700 rounded mb-1"></div>
+                                                <div class="h-2 w-12 bg-gray-100 dark:bg-gray-800 rounded"></div>
+                                            </div>
+                                            <div
+                                                class="px-2 py-1 rounded text-[10px] font-bold bg-yellow-100 text-yellow-700">
+                                                Packing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- Floating Characters & Elements (Simulating the Illustration Vibe) -->
 
                             <!-- Element 1: The "Busy Founder" (Left) -->
-                            <div class="hidden md:block absolute -left-4 top-20 z-20 animate-bounce"
-                                style="animation-duration: 4s">
+                            <div class="absolute -left-4 top-20 z-20 animate-bounce" style="animation-duration: 4s">
                                 <div
                                     class="bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-xl flex items-center gap-3 border border-gray-100 dark:border-gray-700 transform -rotate-6 transition-transform hover:rotate-0 hover:scale-105">
                                     <div
@@ -308,8 +384,7 @@
                             </div>
 
                             <!-- Element 2: The "Growth Graph" (Right Bottom) -->
-                            <div class="hidden md:block absolute -right-8 bottom-12 z-20 animate-bounce"
-                                style="animation-duration: 5s">
+                            <div class="absolute -right-8 bottom-12 z-20 animate-bounce" style="animation-duration: 5s">
                                 <div
                                     class="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 transform rotate-6 transition-transform hover:rotate-0 hover:scale-105">
                                     <div class="flex items-end gap-1 h-12 w-24">
@@ -326,7 +401,7 @@
                             </div>
 
                             <!-- Element 3: Verified Badge (Top Right) -->
-                            <div class="hidden md:block z-20 absolute -right-2 top-0 z-20">
+                            <div class="absolute -right-2 top-0 z-0">
                                 <div
                                     class="w-20 h-20 bg-seagrass/20 rounded-full flex items-center justify-center animate-pulse">
                                     <div
@@ -987,9 +1062,9 @@
                             </p>
                         </div>
 
-                        <div class="flex flex-col gap-4">
+                        <div class="flex flex-col">
                             <div
-                                class="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
+                                class="flex items-center gap-3 p-4 rounded-xl dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
                                 <div
                                     class="w-10 h-10 rounded-full bg-strawberry/10 text-strawberry flex-shrink-0 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
@@ -1000,14 +1075,14 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 dark:text-white">Smart Product Catalogue</h4>
-                                    <p class="text-sm text-slate-600 dark:text-slate-400">A beautiful, organized
+                                    <!-- <p class="text-sm text-slate-600 dark:text-slate-400">A beautiful, organized
                                         showcase of everything they sell, making it easy for viewers to find exactly
-                                        what they need.</p>
+                                        what they need.</p> -->
                                 </div>
                             </div>
 
                             <div
-                                class="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
+                                class="flex items-center gap-3 p-4 rounded-xl dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
                                 <div
                                     class="w-10 h-10 rounded-full bg-strawberry/10 text-strawberry flex-shrink-0 flex items-center justify-center">
                                     <!-- Shopping Bag / Cart Icon -->
@@ -1020,14 +1095,14 @@
                                 <div>
                                     <h4 class="font-bold text-slate-900 dark:text-white">Seamless Ordering & Contact
                                     </h4>
-                                    <p class="text-sm text-slate-600 dark:text-slate-400">Customers can check
+                                    <!-- <p class="text-sm text-slate-600 dark:text-slate-400">Customers can check
                                         availability, contact you instantly, and place orders without the
-                                        back-and-forth.</p>
+                                        back-and-forth.</p> -->
                                 </div>
                             </div>
 
                             <div
-                                class="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
+                                class="flex items-center gap-3 p-4 rounded-xl  dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm">
                                 <div
                                     class="w-10 h-10 rounded-full bg-strawberry/10 text-strawberry flex-shrink-0 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
@@ -1038,8 +1113,8 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 dark:text-white">Effortless Admin Panel</h4>
-                                    <p class="text-sm text-slate-600 dark:text-slate-400">They manage all content,
-                                        products, and updates easily via a simple admin dashboard.</p>
+                                    <!-- <p class="text-sm text-slate-600 dark:text-slate-400">They manage all content,
+                                        products, and updates easily via a simple admin dashboard.</p> -->
                                 </div>
                             </div>
                         </div>
